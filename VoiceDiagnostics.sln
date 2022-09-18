@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32901.215
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VoiceDiagnostics", "VoiceDiagnostics\VoiceDiagnostics.csproj", "{129D18B6-7897-421C-86A7-19B02617291F}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Voice Diagnostics v1.0.0 Setup", "Voice Diagnostics v1.0.0 Setup\Voice Diagnostics v1.0.0 Setup.vdproj", "{ED37CF69-E1CD-4AA5-BB5B-1C468CDD6855}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{129D18B6-7897-421C-86A7-19B02617291F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{129D18B6-7897-421C-86A7-19B02617291F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{129D18B6-7897-421C-86A7-19B02617291F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED37CF69-E1CD-4AA5-BB5B-1C468CDD6855}.Debug|Any CPU.ActiveCfg = Debug
+		{ED37CF69-E1CD-4AA5-BB5B-1C468CDD6855}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

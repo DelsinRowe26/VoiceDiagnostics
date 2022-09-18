@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VoiceDiagnostics"
         mc:Ignorable="d"
-        Title="Voice diagnostics" Height="564" Width="524" Background="#FFE9EBEF" Loaded="VoiceDiagnostics_Loaded">
+        Title="Voice diagnostics" Height="564" Width="524" Background="#FFE9EBEF" Loaded="VoiceDiagnostics_Loaded" Closing="VoiceDiagnostics_Closing" Activated="VoiceDiagnostics_Activated" ResizeMode="NoResize">
     <Grid>
         <TabControl x:Name="tabNFTSet" Margin="127,134,127,134" Width="270" Height="275.04" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}">
             <TabItem x:Name="TabNFT" Header="gNeuro NFT" Background="{x:Null}" BorderBrush="{x:Null}" Margin="46,-2,-50,0" Visibility="Hidden">
@@ -42,7 +42,7 @@
             </TabItem>
         </TabControl>
         <Label x:Name="lbSetMicrophone" Content="Microphone selection" HorizontalAlignment="Center" Margin="0,191,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Visibility="Hidden" HorizontalContentAlignment="Center"/>
-        <Label x:Name="lbSetSpeaker" Content="Speaker selection" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14" FontWeight="Bold" Visibility="Hidden" HorizontalContentAlignment="Center"/>
+        <Label x:Name="lbSetSpeaker" Content="Speaker selection" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" Visibility="Hidden" HorizontalContentAlignment="Center" Margin="0,256,0,0"/>
         <Button x:Name="btnSettings" Content="Button" HorizontalAlignment="Left" Margin="31,30,0,0" VerticalAlignment="Top" Width="52" Height="52" Foreground="{x:Null}" BorderBrush="{x:Null}" ToolTip="Settings" MouseMove="btnSettings_MouseMove" MouseLeave="btnSettings_MouseLeave" Click="btnSettings_Click">
             <Button.Background>
                 <ImageBrush x:Name="ImgBtnSettings" ImageSource="/button-settings-inactive.png"/>
@@ -53,7 +53,7 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
-        <Button x:Name="btnRecord" Content="Button" HorizontalAlignment="Left" Margin="221,461,0,0" VerticalAlignment="Top" Width="52" Height="52" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseMove="btnRecord_MouseMove" MouseLeave="btnRecord_MouseLeave" Click="btnRecord_Click">
+        <Button x:Name="btnRecord" Content="Button" HorizontalAlignment="Center" Margin="0,446,0,0" VerticalAlignment="Top" Width="52" Height="52" BorderBrush="{x:Null}" Foreground="{x:Null}" MouseMove="btnRecord_MouseMove" MouseLeave="btnRecord_MouseLeave" Click="btnRecord_Click">
             <Button.Background>
                 <ImageBrush x:Name="ImgRecordingBtn" ImageSource="/button-record-inactive.png"/>
             </Button.Background>
@@ -66,6 +66,40 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+        <ProgressBar x:Name="pbRecord" HorizontalAlignment="Center" Height="16" Margin="0,48,0,0" VerticalAlignment="Top" Width="200" Foreground="{x:Null}" BorderBrush="{x:Null}" Visibility="Hidden">
+            <ProgressBar.Background>
+                <ImageBrush x:Name="ImgPBRecordBack" ImageSource="/progressbar-backgrnd.png"/>
+            </ProgressBar.Background>
+            <ProgressBar.Template>
+                <ControlTemplate>
+                    <Border Background="{TemplateBinding Background}"/>
+                </ControlTemplate>
+            </ProgressBar.Template>
+        </ProgressBar>
+        <ProgressBar x:Name="PBNFT" HorizontalAlignment="Center" Height="16" Margin="0,30,0,0" VerticalAlignment="Top" Width="200" Visibility="Hidden"/>
+        <Label x:Name="lbRecordPB" Content="Recording in progress..." HorizontalAlignment="Center" Margin="0,69,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" Visibility="Hidden">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF100B7"/>
+                    <GradientStop Color="#FF8D00FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button x:Name="btnAudition" Content="Button" HorizontalAlignment="Center" Margin="0,161,0,0" VerticalAlignment="Top" Height="251" Width="270" Background="#FFFFFBFB" BorderBrush="{x:Null}" Foreground="{x:Null}" Opacity="0" Click="btnAudition_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border x:Name = "btnAud1" Background="{TemplateBinding Background}"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Label x:Name="lbTimer" Content="0" HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" HorizontalContentAlignment="Center" Visibility="Hidden">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF100B7"/>
+                    <GradientStop Color="#FF8D00FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
 
     </Grid>
 </Window>

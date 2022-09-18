@@ -1,0 +1,28 @@
+﻿<Window x:Name="WinInf1" x:Class="VoiceDiagnostics.WinInf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VoiceDiagnostics"
+        mc:Ignorable="d"
+        Title="WinInf" Height="194" Width="336" Closing="WinInf1_Closing" Topmost="True" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="Держите звук «А» 3 секунды. Сейчас запустится таймер, после окончания начентся запись." VerticalAlignment="Top" Height="107" Width="278" FontSize="18" FontWeight="Bold">
+            <TextBlock.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF100B7"/>
+                    <GradientStop Color="#FF8D00FF" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Foreground>
+        </TextBlock>
+        <Button x:Name="btnOK" Content="OK" HorizontalAlignment="Left" Margin="222,117,0,0" VerticalAlignment="Top" Height="21" Width="66" FontWeight="Bold" FontSize="14" Click="btnOK_Click">
+            <Button.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF100B7"/>
+                    <GradientStop Color="#FF8D00FF" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Foreground>
+        </Button>
+
+    </Grid>
+</Window>
